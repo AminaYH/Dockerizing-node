@@ -27,13 +27,13 @@ CMD ["npm" , "start"]
 
 front/Dockerfile
 
-FROM node:latest
-WORKDIR /app
-COPY package.json ./
-RUN npm install
-COPY . .
-EXPOSE 5000
-CMD ["npm", "start"]
+				FROM node:latest
+				WORKDIR /app
+				COPY package.json ./
+				RUN npm install
+				COPY . .
+				EXPOSE 5000
+				CMD ["npm", "start"]
 
 
 Docker Compose
