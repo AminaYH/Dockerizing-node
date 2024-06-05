@@ -22,7 +22,7 @@ app_back/Dockerfile
 		COPY package.json ./
 		RUN npm install
 		COPY . .
-		EXPOSE 80
+		EXPOSE 3000
 
 		CMD ["npm" , "start"]
 
@@ -60,7 +60,7 @@ docker-compose.yml
 		    container_name: back-end
 		
 		    ports:
-		      - "8000:80"
+		      - "8001:3000"
 		    depends_on:
 		      - database
 		    environment:
