@@ -33,7 +33,7 @@ front/Dockerfile
 		COPY package.json ./
 		RUN npm install
 		COPY . .
-		EXPOSE 5000
+		EXPOSE 8000
 		CMD ["npm", "start"]
 	
 
@@ -50,7 +50,7 @@ docker-compose.yml
 		    networks:
 		      - node-network
 		    ports:
-		      - "5001:5000"
+		      - "8001:8000"
 		    networks:
 		      - node-network
 		  backend:
