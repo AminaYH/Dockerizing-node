@@ -1,18 +1,19 @@
-Full-Stack Application with Docker
+#Full-Stack Application with Docker
+
 This repository contains the Docker setup for a full-stack application consisting of a React.js front-end application, a Node.js backend API, and a PostgreSQL database. The Dockerfiles and Docker Compose file provided here allow you to containerize the entire application, making it easily deployable and scalable using Docker containers.
 
-Directory Structure
-	project/
-	│
-	├── front_app/
-	│ ├── Dockerfile
-	│ └── (other frontend files)
-	│
-	├── app_back/
-	│ ├── Dockerfile
-	│ └── (other backend files)
-	│
-	└── docker-compose.yml
+	Directory Structure
+		project/
+		│
+		├── front_app/
+		│ ├── Dockerfile
+		│ └── (other frontend files)
+		│
+		├── app_back/
+		│ ├── Dockerfile
+		│ └── (other backend files)
+		│
+		└── docker-compose.yml
 app_back/Dockerfile
 
 	FROM node:latest
