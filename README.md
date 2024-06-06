@@ -73,8 +73,8 @@ docker-compose.yml
 		  database:
 		    image: postgres:latest
 		    container_name: database
-		    ports:
-		      - "5432:5432"
+		   # ports:
+		   #   - "5432:5432"
 		    environment:
 		      - POSTGRES_USER=amina
 		      - POSTGRES_PASSWORD=PS1234
@@ -91,3 +91,11 @@ docker-compose.yml
 		    driver: bridge
 		
 
+Remember, always avoid mapping the database port to the host machine to prevent unwanted access to the database. 
+  Instead, ensure that your database container is accessible only within the Docker network.
+
+Always mount volumes to persist data. This ensures that even if the container is down, your data remains intact.
+
+Utilize virtual networks to isolate your containers and control communication between them effectively.
+
+Consider using Docker plugins for encrypting your data volumes to enhance security and protect sensitive information.
