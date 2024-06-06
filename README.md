@@ -90,7 +90,8 @@ docker-compose.yml
 		  node-network:
 		    driver: bridge
 		
-	--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------
 
 Remember, always avoid mapping the database port to the host machine to prevent unwanted access to the database. 
   Instead, ensure that your database container is accessible only within the Docker network.
@@ -101,4 +102,8 @@ Utilize virtual networks to isolate your containers and control communication be
 
 Consider using Docker plugins for encrypting your data volumes to enhance security and protect sensitive information.
 
+----------------------------------------------------------------------------------------------------------------------
 
+Form the best solution for auto-scaling containers in a resource-constrained VPS environment, tools like K3s or Docker Swarm are suitable options. They offer lightweight orchestration capabilities, minimizing resource overhead. Alternatively, if resources on the private server are limited, leveraging cloud-based container orchestration services can provide scalability without straining local resources.
+----------------------------------------------------------------------------------------------------------------------
+Configure Jenkins to run the new dockerized train-schedule pipeline
