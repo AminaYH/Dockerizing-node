@@ -105,5 +105,6 @@ Consider using Docker plugins for encrypting your data volumes to enhance securi
 ----------------------------------------------------------------------------------------------------------------------
 
 Form the best solution for auto-scaling containers in a resource-constrained VPS environment, tools like K3s or Docker Swarm are suitable options. They offer lightweight orchestration capabilities, minimizing resource overhead. Alternatively, if resources on the private server are limited, leveraging cloud-based container orchestration services can provide scalability without straining local resources.
+
 ----------------------------------------------------------------------------------------------------------------------
 Configure Jenkins to run the new dockerized train-schedule pipeline
