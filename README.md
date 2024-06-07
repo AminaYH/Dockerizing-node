@@ -39,57 +39,57 @@ front/Dockerfile
 
 Docker Compose
 docker-compose.yml
-				version: '3'
-		
-		services:
-		  frontend:
-		    build:
-		      context: ./front_app
-		      dockerfile: Dockerfile
-		    container_name: front-end
-		    networks:
-		      - node-network
-		    ports:
-		      - "8001:8000"
-		    networks:
-		      - node-network
-		  backend:
-		    build:
-		      context: ./app_back
-		      dockerfile: Dockerfile
-		    container_name: back-end
-		
-		    ports:
-		      - "8001:3000"
-		    depends_on:
-		      - database
-		    environment:
-		      - POSTGRES_HOST=postgres
-		      - POSTGRES_PORT=5432
-		      - POSTGRES_USER=amina
-		      - POSTGRES_PASSWORD=PS1234
-		      - POSTGRES_DB=databaseNj
-		
-		  database:
-		    image: postgres:latest
-		    container_name: database
-		   # ports:
-		   #   - "5432:5432"
-		    environment:
-		      - POSTGRES_USER=amina
-		      - POSTGRES_PASSWORD=PS1234
-		      - POSTGRES_DB=databaseNj
-		    volumes:
-		      - pgdata:/var/lib/postgresql/data
-		    networks:
-		      - node-network
-		volumes:
-		  pgdata:
-		
-		networks:
-		  node-network:
-		    driver: bridge
-		
+
+	version: '3'
+	services:
+	  frontend:
+	    build:
+	      context: ./front_app
+	      dockerfile: Dockerfile
+	    container_name: front-end
+	    networks:
+	      - node-network
+	    ports:
+	      - "8001:8000"
+	    networks:
+	      - node-network
+	  backend:
+	    build:
+	      context: ./app_back
+	      dockerfile: Dockerfile
+	    container_name: back-end
+	
+	    ports:
+	      - "8001:3000"
+	    depends_on:
+	      - database
+	    environment:
+	      - POSTGRES_HOST=postgres
+	      - POSTGRES_PORT=5432
+	      - POSTGRES_USER=amina
+	      - POSTGRES_PASSWORD=PS1234
+	      - POSTGRES_DB=databaseNj
+	
+	  database:
+	    image: postgres:latest
+	    container_name: database
+	   # ports:
+	   #   - "5432:5432"
+	    environment:
+	      - POSTGRES_USER=amina
+	      - POSTGRES_PASSWORD=PS1234
+	      - POSTGRES_DB=databaseNj
+	    volumes:
+	      - pgdata:/var/lib/postgresql/data
+	    networks:
+	      - node-network
+	volumes:
+	  pgdata:
+	
+	networks:
+	  node-network:
+	    driver: bridge
+
 
 ----------------------------------------------------------------------------------------------------------------------
 
