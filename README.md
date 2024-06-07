@@ -1,4 +1,4 @@
-# Full-Stack Application with Docker
+ # Full-Stack Application with Docker
 
 This repository contains the Docker setup for a full-stack application consisting of a React.js front-end application, a Node.js backend API, and a PostgreSQL database. The Dockerfiles and Docker Compose file provided here allow you to containerize the entire application, making it easily deployable and scalable using Docker containers.
 
@@ -102,9 +102,3 @@ Utilize virtual networks to isolate your containers and control communication be
 
 Consider using Docker plugins for encrypting your data volumes to enhance security and protect sensitive information.
 
-----------------------------------------------------------------------------------------------------------------------
-
-Form the best solution for auto-scaling containers in a resource-constrained VPS environment, tools like K3s or Docker Swarm are suitable options. They offer lightweight orchestration capabilities, minimizing resource overhead. Alternatively, if resources on the private server are limited, leveraging cloud-based container orchestration services can provide scalability without straining local resources.
-
-----------------------------------------------------------------------------------------------------------------------
-Configure Jenkins to run the new dockerized train-schedule pipeline
