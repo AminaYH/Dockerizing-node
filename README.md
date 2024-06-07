@@ -4,7 +4,7 @@ This repository contains the Docker setup for a full-stack application consistin
 
 ## Directory Structure
 
-		project/
+		Dockerizing-node/
 		│
 		├── front_app/
 		│ ├── Dockerfile
